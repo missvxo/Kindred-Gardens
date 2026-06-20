@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kindred Gardens Contact Filter</title>
+<style>
+    body {
+        background-color: #fcfbfa; /* Warm oatmeal background */
+        font-family: 'Georgia', serif; /* Elegant, premium typography */
+        color: #2e332e; /* Soft charcoal/dark green */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 40px 20px;
+    }
+
+    .form-container {
+        max-width: 600px;
+        width: 100%;
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 4px;
+        box-shadow: 0 4px 20px rgba(46, 51, 46, 0.05);
+        border: 1px solid #eae7e2;
+    }
+
+    h2 {
+        font-size: 28px;
+        font-weight: 400;
+        color: #3d4a3e; /* Muted Sage/Forest Green */
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .intro-text {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #616661;
+        margin-bottom: 30px;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .form-group {
+        margin-bottom: 25px;
+    }
+
+    label {
+        display: block;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+        color: #4a524a;
+        font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #dcd9d4;
+        background-color: #faf9f6;
+        border-radius: 2px;
+        font-family: inherit;
+        font-size: 15px;
+        box-sizing: border-box;
+        color: #2e332e;
+        transition: border-color 0.3s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+        outline: none;
+        border-color: #728273; /* Focused leaf green */
+    }
+
+    .radio-group {
+        margin-top: 5px;
+    }
+
+    .radio-option {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 12px;
+        font-size: 14px;
+        line-height: 1.4;
+        color: #4a524a;
+        cursor: pointer;
+    }
+
+    .radio-option input {
+        margin-top: 3px;
+        margin-right: 10px;
+        accent-color: #728273;
+    }
+
+    button {
+        width: 100%;
+        padding: 15px;
+        background-color: #445245; /* Signature Deep Botanical Green */
+        color: #ffffff;
+        border: none;
+        font-family: inherit;
+        font-size: 16px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        border-radius: 2px;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #333e34;
+    }
+</style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Let’s Cultivate Something Beautiful</h2>
+    <div class="intro-text">
+        Our practice is deeply plant-led, focusing on creating resilient, living systems and long-term garden stewardship. If you want to transform your outdoor space into an ecologically vibrant haven, we would love to hear from you.<br><br>
+        <strong>Please note:</strong> We specialize strictly in horticultural curation and planting design. We do not take on standalone paving, structural fencing, or hardscaping projects.
+    </div>
+
+    <form action="#" method="POST">
+        <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="e.g., Eleanor Vance" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="e.g., eleanor@example.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="location">Project Location / Postcode</label>
+            <input type="text" id="location" name="location" placeholder="e.g., Brighton, BN1" required>
+        </div>
+
+        <div class="form-group">
+            <label>Which description best fits your project?</label>
+            <div class="radio-group">
+                <label class="radio-option">
+                    <input type="radio" name="alignment" value="plant-led" required>
+                    A plant-led transformation focusing on biodiversity, soft landscaping, and custom curation.
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="alignment" value="stewardship">
+                    Ongoing seasonal garden stewardship, plant health guidance, and expert care.
+                </label>
+                <label class="radio-option">
+                    <input type="radio" name="alignment" value="hardscape">
+                    A hardscaping-only project (e.g., just layout paving, decking, or new fencing).
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="budget">Estimated Investment</label>
+            <select id="budget" name="budget" required>
+                <option value="" disabled selected>Select a range...</option>
+                <option value="under-3k">Under £3,000</option>
+                <option value="3k-7k">£3,000 – £7,500</option>
+                <option value="7k-15k">£7,500 – £15,000</option>
+                <option value="15k-plus">£15,000 +</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Tell us about the space you want to create...</label>
+            <textarea id="message" name="message" rows="4" placeholder="Describe the current state of your borders, sunlight, or what you hope to experience in your garden..." required></textarea>
+        </div>
+
+        <button type="submit">Send Inquiry to Hannah</button>
+    </form>
+</div>
+
+</body>
+</html>
